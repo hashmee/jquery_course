@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jquery course</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<style>
+  h1.display-4{
+    background: cyan
+  }
+</style>
+<body>
+  <div class="container">
+    <h1 class="display-4"> jQuery course</h1>
+    <div>
+      <p>Topics to be covered:</p>
+      <ul id="list">
+        <li>selectors</li>
+        <li>events</li>
+        <li>methods</li>
+        <li>DOM manipulations</li>
+        <li>Effects and animations</li>
+        <li>Ajax</li>
+      </ul>
+    </div>
+    <br><br>
+    <a href="https://google.com">Google</a>
+    <a href="https://facebook.com">Facebook</a>
+    
+    <br><br><br>
+    <input type="button" value="button">
+    <input type="submit" value="submit">
+    <input type="text" value="some dummy text">
+
+
+    <h1 class='heading-1'>Heading one</h1>
+    <p class='para-1'><span>jQuery is a fast, small, and feature-rich JavaScript library.</span>It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+    <h1 class='heading-2'>Heading two</h1>
+    <p class='para-2'>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of <span>people write JavaScript.</span></p>
+    <h1 class='heading-3'>Heading three</h1>
+    <p class='para-3'>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, <span>jQuery has changed the way that millions of people write JavaScript.</span></p>
+    <span>this is a dummy span tag</span>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    // $('h1.heading-1').hide()
+    $('p span').css('color', 'red');
+    $('ul#list li').css('list-style', 'none');
+    $('ul#list li:even').css('color', 'red');
+    $('ul#list li:odd').css('color', 'green');
+    $('ul#list li:nth-child(2n)').css('background', 'yellow');
+
+    // $(':button').hide()
+    // $(':submit').hide()
+    // $(':text').hide()
+
+    $('[href]').css('color', 'red');
+    $('a[href="https://facebook.com"]').css('color', 'green');
+
+    // $('*').hide()
+  </script>  
+</body>
+</html>
