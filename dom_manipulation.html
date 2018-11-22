@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Jquery | DOM Manipulation</title>
+</head>
+<style>
+  h1{
+    background: yellow
+  }
+  .myClass{
+    color: blue;
+    background: black;
+  }
+</style>
+<body>
+  <h1>Jquery | DOM Manipulation</h1>
+  <button id="btn">button</button>
+  <p class="para1">this is paragraph one</p>
+  <p class="para2">this is another paragraph</p>
+  <div id="myDiv"></div>
+  <input type="text" id="newItem">
+  <ul id="list">
+    <li>ListItem 1</li>
+    <li>ListItem 2</li>
+    <li>ListItem 3</li>
+    <li>ListItem 4</li>
+  </ul>
+
+  <a id="profileLink" href="http://hashmi.smf.gitlab.io">Hashmi</a>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      /*
+      $('p.para1').css({color: 'red', background: '#ccc'});
+      $('p.para2').addClass('myClass');
+      $('p.para2').removeClass('myClass');
+      $('#btn').click(function(){
+        $('p.para2').toggleClass('myClass');
+      })
+      $('#myDiv').text('Hello World');
+      $('#myDiv').html(`
+        <h3>Bhai</h3>
+        <p>Alhumdullilah</p>
+        <ul>
+          <li>List Item 1</li>
+        </ul>
+      `)
+      $('ul#list').append(`<li>Append List 5</li>`)
+      $('ul#list').prepend(`<li>Prepend List 0</li>`)
+      */
+
+      // $('p.para1').appendTo('.para2')
+      // $('p.para1').prependTo('.para2')
+
+      // $('ul').after(`<h4>This is a after func from Jquery</h4>`)
+
+      // $('ul').empty();
+      // $('ul').detach();
+
+      // $('a#profileLink').attr('target', '_blank');
+      // $('a#profileLink').removeAttr('target');
+
+      // $('p').wrapAll('<h1>')
+
+      $('#newItem').keyup(function(e){
+         console.log(e.which);
+         var code = e.which;
+         if(code == 13){
+           e.preventDefault();
+           $('ul#list').append(`<li> ${e.target.value} </li>`)
+           $('#newItem').val('')
+         }
+      })
+
+      // var myArr = ['muther', 'abdul qadeer', 'amjad']
+      // $.each(myArr, function(i, val){
+      //   $('ul#list').append(`<li> ${val} </li>`)  
+      // })
+
+
+
+
+
+
+    })
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jquery Events</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container pt-5">
+    <!-- <button id="btn1">button 1</button>
+    <button id="btn2">button 2</button> -->
+    <button id="btn3" class="btn btn-success btn-lg">button 3</button>
+    <h1 id="coords"></h1>
+    <p id="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque exercitationem repellat consequuntur qui ad, est quae blanditiis nesciunt non hic ab voluptas explicabo error nisi iste perferendis obcaecati molestiae adipisci!</p>
+    
+    <h5>Form Events</h5>
+
+    <form id="submit">
+      <div>
+        <label for="name">Name</label>
+        <span class="mandatory">*</span>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Enter Name..." required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Enter Email...">
+      </div>
+      <div>
+        <label for="email">Gender</label>
+        <br>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Form submit">
+      </div>
+    </form>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // $('input').focus(function(){
+      //   $(this).css('background', 'pink');
+      // })
+
+      // $('input').blur(function(){
+      //   $(this).css('background', '#fff');
+      // })
+
+      // $('input').keyup(function(e){
+      //   console.log(e.target.value)
+      // })
+
+      // $('select#gender').change(function(e){
+      //   $('#para1').html(e.target.value);
+      // })
+
+      $('form').on('submit', function(){
+        if(parseInt($('input#name').val()) > 0){
+          alert('name should not be a number')
+        }
+      })
+
+      
+      // $('#btn1').click(function(){
+      //   $('#para1').hide()
+      // });
+      // $('#btn2').click(function(){
+      //   $('#para1').show()
+      // });
+
+      // $('#btn3').click(function(){
+      //   $('#para1').toggle();
+      // })
+
+      // $('#btn3').dblclick(function(){
+      //   $('#para1').toggle();
+      // })
+
+      // $('#btn3').mouseenter(function(){
+      //     $('#para1').toggle();
+      // })
+
+      // $('#btn3').mouseleave(function(){
+      //     $('#para1').toggle();
+      // })
+
+      // $(document).on('mousemove', function(e){
+      //   $('#coords').html('X:' + e.clientX+ ' '+ 'Y:' + e.clientY)
+      // })
+
+      // $('#btn3').mouseup(function(){
+      //   $('#para1').toggle();
+      // })
+      // $('#btn3').mousedown(function(){
+      //   $('#para1').toggle();
+      // })
+
+    })
+  </script>
+</body>
+</html>
